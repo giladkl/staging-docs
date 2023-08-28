@@ -1,0 +1,126 @@
+site_name: Epsio Docs
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - navigation.path
+    - navigation.footer
+    - content.tabs.link
+    - content.code.copy
+    - content.code.select
+
+  palette:
+    scheme: slate
+  logo: assets/Epsio_negative.svg
+  favicon: assets/favicon.png
+  custom_dir: overrides
+
+nav:
+  - ABOUT:
+    - Overview: 'index.md'
+    - 'Architecture': 'about/integrating-epsio.md'
+    - 'Key concepts': 'about/key-concepts.md'
+    - 'Data Security': 'about/data-privacy-and-security.md'
+#    - 'Use cases': 'quickstart/using-epsio.md'
+    # - 'How it works': 'about/key-concepts.md'
+  - GETTING STARTED:
+      - 'Sign up for a free trial': 'getting-started/sign-up.md'
+      - 'Deploy Epsio':
+        - PostgreSQL:
+          - Deploy in AWS:
+            - 'getting-started/deployment/AWS/deployment-guide-AWS.md'
+            - 'Deployment guide' : 'getting-started/deployment/AWS/deployment-guide-AWS.md'
+            - 'AWS role permissions': 'getting-started/deployment/AWS/aws-role-permissions.md'
+            - 'Networking': 'getting-started/deployment/AWS/networking.md'
+          - Deploy in GCP:
+            - 'getting-started/deployment/GCP/deployment-guide-GCP.md'
+            - 'Deployment guide' : 'getting-started/deployment/GCP/deployment-guide-GCP.md'
+
+          # - Deploy in Azure: 'getting-started/deployment/azure-private-beta.md'
+          # - Deploy with Docker: 'deployment/mysql-private-beta.md'
+        - 'MySQL' : 'getting-started/deployment/mysql-private-beta.md'
+        - 'SQL Server' :  'getting-started/deployment/sqlserver-private-beta.md'
+        # - 'Oracle' :  'deployment/oracle-private-beta.md'
+        # - Deploy in GCP:
+        #   - 'deployment/deploy-with-postgres.md'
+        #   - 'AWS role permissions': 'deployment/aws-role-permissions.md'
+        # - Deploy in Azure:
+        #   - 'deployment/deploy-with-postgres.md'
+        #   - 'AWS role permissions': 'deployment/aws-role-permissions.md'
+        # - Deploy with Docker:
+        #   - 'deployment/deploy-with-postgres.md'
+        #   - 'AWS role permissions': 'deployment/aws-role-permissions.md'
+      - 'Define your first query': 'getting-started/first-view.md'
+
+  # - MANAGING EPSIO:
+  #   - 'Monitor your cluster': 'getting-started/defining-your-first-view.md'
+  #   - 'Uninstall Epsio': 'getting-started/defining-your-first-view.md'
+
+    
+
+  - REFERENCE:
+    - Views Management:
+      - create_view: 'reference/views-management/create_view.md'
+      - list_views: 'reference/views-management/list_views.md'
+      - drop_view: 'reference/views-management/drop_view.md'
+      - rename_view: 'reference/views-management/rename_view.md'
+    - Indexes Management:
+        - create_index: 'reference/views-management/indexes/create_index.md'
+        - list_indexes: 'reference/views-management/indexes/list_indexes.md'
+        - drop_index: 'reference/views-management/indexes/drop_index.md'
+    # - Support:
+    #   - Types: 'sql-support/types.md'
+    #   - SQL: 'sql-support/queries.md'
+    #   - 'Expressions and Operators': 'sql-support/expressions-and-operators.md'
+    #   - 'Built-in Functions': 'sql-support/built-in-functions.md'
+  - EXAMPLE DATASETS:
+    - NYC Taxi Dataset: 'examples/nyc-taxi.md'
+  - Frequently Asked Questions: 'faq.md'
+
+plugins:
+  - search
+  - section-index
+  - mkdocs-video
+
+extra_css:
+  - stylesheets/extra.css
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+      use_pygments: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - admonition
+  - pymdownx.details
+  - tables
+  - attr_list
+  - md_in_html
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      clickable_checkbox: true
+      custom_checkbox: true
+  - toc:
+      permalink: true
+
+
+copyright: Copyright &copy; 2023 Epsio Labs
+
+
+extra:
+  generator: false
+  analytics:
+    provider: google
+    property: G-6V5X25E3DG
+  homepage: "https://epsio.io/"
+
+extra_javascript:
+- javascript/hotjar.js
+- javascript/header.js
